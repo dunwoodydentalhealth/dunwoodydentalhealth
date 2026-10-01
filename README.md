@@ -2,7 +2,7 @@
 Static HTML/CSS/JS site (Home, About Us, Contact Us).
 
 ## Images
-Patient photos load from i.pravatar.cc (random stock faces). To use your own, save 5 portrait photos as `images/patient-1.jpg` to `patient-5.jpg` and replace the `src` URLs in `build.py` (function `fig`), then run `python3 build.py`.
+Patient photos are in `images/` (patient-1.jpg to patient-6.jpg). Replace a file with the same name to swap a photo.
 
 ## Deploy
 1. `git init && git add . && git commit -m "Initial site"`

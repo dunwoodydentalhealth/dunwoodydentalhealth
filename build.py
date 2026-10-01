@@ -55,8 +55,8 @@ def page(fn,title,desc,body,active):
     open(fn,'w').write(html)
 
 def fig(n,alt,cls=""):
-    ids={1:47,2:12,3:32,4:5,5:49}
-    return f'<figure class="ph {cls}"><img src="https://i.pravatar.cc/800?img={ids[n]}" alt="{alt}" loading="lazy" onerror="this.onerror=function(){{this.remove()}};this.src=\'images/patient-{n}.jpg\'"></figure>'
+    alts={1:"Smiling patient checking her new smile with the dentist",2:"Dentist reviewing treatment options with a smiling patient on a tablet",3:"Close-up of a patient's bright smile with tooth shade guide",4:"Child patient at a gentle dental check-up",5:"Young patient receiving dental care",6:"Dentist using a digital intraoral scanner on a patient"}
+    return f'<figure class="ph {cls}"><img src="images/patient-{n}.jpg" alt="{alts[n]}" width="1000" height="1000" loading="lazy"></figure>'
 
 why=[("Fast and Efficient Care","Your visit should feel organized from start to finish. We keep things moving smoothly and completely respect your busy daily schedule."),("Same Day Dentistry","Need treatment urgently? We can often take care of your dental procedures on the exact same day, helping you avoid unnecessary extra visits."),("Modern Technology","Digital scans and advanced imaging help us diagnose issues clearly, explain treatment paths better, and perform procedures much more efficiently."),("Clear and Transparent Communication","You will always know what we see, what we recommend, and what your options are, without ever feeling rushed or pushed into decisions.")]
 ben=[("Reduced Dental Anxiety","Our gentle techniques, calming environment, and supportive staff ensure that even nervous patients feel completely safe, relaxed, and comfortable throughout their visit."),("Flexible Financial Solutions","We offer convenient payment plans, membership options, and accept major PPO insurance to ensure quality dental care easily fits your personal budget."),("Save Valuable Time","With streamlined appointments and same-day treatment capabilities, we minimize time away from your work and family commitments while maximizing oral health outcomes."),("Long-Term Oral Health","Our proactive approach focuses on preventing future complications, ensuring your teeth and gums remain strong, healthy, and functional for many years to come.")]
@@ -69,9 +69,9 @@ home=f'''
 <h1>Modern Dental Care Designed Around Your Schedule And Comfort</h1>
 <p class="lead">Preventive care, implants, aligners and emergency visits, all explained clearly and delivered on your time.</p>
 <p class="cta"><a class="btn" href="contact.html#book">Book an appointment</a><a class="btn btn-ghost" href="#services">See our services</a></p></div>
-{fig(1,"Smiling patient at a dental clinic","arch hero-img")}</div></section>
+{fig(1,"Smiling patient in a dental chair talking with the dentist","arch hero-img")}</div></section>
 
-<section class="sec"><div class="wrap split">{fig(2,"Dentist speaking with a patient","arch")}<div>
+<section class="sec"><div class="wrap split">{fig(2,"Patient smiling during a dental check-up","arch")}<div>
 <h2>About Dunwoody Dental Health</h2>
 <p>{{{{B}}}} is a trusted dental clinic dedicated to providing exceptional, patient-centered care in a welcoming and modern environment. Serving our local community with pride, the practice offers comprehensive dental services, including preventive care, cosmetic dentistry, dental implants, restorative treatments, emergency dentistry, and clear aligners. With a team of experienced professionals, advanced dental technology, and a commitment to honest communication, {{{{B}}}} ensures every patient receives personalized treatment tailored to their unique needs. Our focus on comfort, quality, and long-term oral health has earned us a reputation for compassionate care, helping patients of all ages achieve healthy, confident smiles. Whether you need a routine cleaning or advanced restorative work, we strive to make every visit efficient, transparent, and completely stress-free.</p>
 <p><a class="textlink" href="about.html">More about our practice</a></p></div></div></section>
@@ -85,7 +85,7 @@ home=f'''
 <div><h2>My vision</h2><p>Our vision is to be the leading dental healthcare provider recognized for clinical excellence, patient-focused innovation, and unwavering community trust. We aspire to redefine the traditional dental experience by seamlessly integrating advanced diagnostic technology, efficient treatment workflows, and a deeply compassionate approach. {{{{B}}}} envisions a future where every patient looks forward to maintaining their dental health because they experience absolute comfort, transparent guidance, and predictable results. Through continuous professional growth, modern practices, and a genuine passion for healthy smiles, we aim to set a new standard for comprehensive dental wellness. We hope to inspire lifelong oral health habits across generations, serving as a reliable medical touchstone for families who value quality and integrity.</p></div></div></section>
 
 <section class="sec"><div class="wrap"><h2>Benefits</h2><div class="grid4">{cards(ben)}</div>
-<div class="gallery">{fig(3,"Happy patient after a dental visit","arch")}{fig(4,"Family smiling together","arch")}{fig(5,"Patient receiving a gentle checkup","arch")}</div></div></section>
+<div class="gallery">{fig(3,"Patient receiving gentle dental care","arch")}{fig(4,"Smiling patient ready for treatment","arch")}{fig(5,"Patient talking with a dentist before treatment","arch")}</div></div></section>
 
 <section class="sec band"><div class="wrap center"><h2>Ready for a calmer dental visit?</h2><p class="cta"><a class="btn btn-light" href="contact.html#book">Book an appointment</a></p></div></section>'''
 page("index.html","Dunwoody Dental Health | Modern Dental Care Around Your Schedule","Modern dental care designed around your schedule and comfort. Preventive care, implants, clear aligners, emergency dentistry and more at Dunwoody Dental Health.",home,"index.html")
@@ -99,7 +99,7 @@ paras=["Welcome to {{B}}, where your smile, comfort, and long-term health are al
 "We invite you to experience a new standard of dental care where your schedule is respected, your comfort is prioritized, and your smile is always in expert hands. Come visit {{B}} and discover how easy, modern, and rewarding going to the dentist can truly be."]
 P=lambda i:f'<p>{paras[i]}</p>'
 about=f'''<section class="page-head"><div class="wrap"><h1>About Us</h1><p class="lead">Honest, efficient dentistry tailored to the individual.</p></div></section>
-<section class="sec"><div class="wrap split">{fig(2,"Dentist and patient talking","arch")}<div>{P(0)}{P(1)}</div></div></section>
+<section class="sec"><div class="wrap split">{fig(6,"","arch")}<div>{P(0)}{P(1)}</div></div></section>
 <section class="sec tint"><div class="wrap split rev"><div>{P(2)}{P(3)}</div>{fig(3,"Patient looking at digital scans with the dentist","arch")}</div></section>
 <section class="sec"><div class="wrap split">{fig(4,"Friendly dental team with a patient","arch")}<div>{P(4)}{P(5)}</div></div></section>
 <section class="sec band"><div class="wrap center"><p class="big">{paras[6]}</p><p class="cta"><a class="btn btn-light" href="contact.html#book">Book an appointment</a></p></div></section>'''
