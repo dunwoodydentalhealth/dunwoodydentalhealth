@@ -54,7 +54,9 @@ def page(fn,title,desc,body,active):
 <script src="js/main.js"></script></body></html>'''
     open(fn,'w').write(html)
 
-def fig(n,alt,cls=""): return f'<figure class="ph {cls}"><img src="images/patient-{n}.jpg" alt="{alt}" loading="lazy" onerror="this.remove()"></figure>'
+def fig(n,alt,cls=""):
+    ids={1:47,2:12,3:32,4:5,5:49}
+    return f'<figure class="ph {cls}"><img src="https://i.pravatar.cc/800?img={ids[n]}" alt="{alt}" loading="lazy" onerror="this.onerror=function(){{this.remove()}};this.src=\'images/patient-{n}.jpg\'"></figure>'
 
 why=[("Fast and Efficient Care","Your visit should feel organized from start to finish. We keep things moving smoothly and completely respect your busy daily schedule."),("Same Day Dentistry","Need treatment urgently? We can often take care of your dental procedures on the exact same day, helping you avoid unnecessary extra visits."),("Modern Technology","Digital scans and advanced imaging help us diagnose issues clearly, explain treatment paths better, and perform procedures much more efficiently."),("Clear and Transparent Communication","You will always know what we see, what we recommend, and what your options are, without ever feeling rushed or pushed into decisions.")]
 ben=[("Reduced Dental Anxiety","Our gentle techniques, calming environment, and supportive staff ensure that even nervous patients feel completely safe, relaxed, and comfortable throughout their visit."),("Flexible Financial Solutions","We offer convenient payment plans, membership options, and accept major PPO insurance to ensure quality dental care easily fits your personal budget."),("Save Valuable Time","With streamlined appointments and same-day treatment capabilities, we minimize time away from your work and family commitments while maximizing oral health outcomes."),("Long-Term Oral Health","Our proactive approach focuses on preventing future complications, ensuring your teeth and gums remain strong, healthy, and functional for many years to come.")]

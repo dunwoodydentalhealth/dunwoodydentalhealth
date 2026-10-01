@@ -2,7 +2,7 @@
 Static HTML/CSS/JS site (Home, About Us, Contact Us).
 
 ## Images
-Put 5 patient photos in `images/` named `patient-1.jpg` ... `patient-5.jpg` (portrait, about 1000x1250). Free options: unsplash.com, pexels.com. Until then the blue arch placeholders show.
+Patient photos load from i.pravatar.cc (random stock faces). To use your own, save 5 portrait photos as `images/patient-1.jpg` to `patient-5.jpg` and replace the `src` URLs in `build.py` (function `fig`), then run `python3 build.py`.
 
 ## Deploy
 1. `git init && git add . && git commit -m "Initial site"`
